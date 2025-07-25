@@ -26,7 +26,7 @@ The project consists of the following files and directories:
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone 
    cd website-builder
    ```
 
