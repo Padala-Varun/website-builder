@@ -1,0 +1,335 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varun Kumar Padala - Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+/* General Section Style */
+section {
+  padding: 50px 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About Section */
+#about {
+  background-color: #f4f4f4;
+}
+
+/* Skills Section */
+#skills {
+  background-color: #fff;
+}
+.skill-bar {
+  background-color: #eee;
+  height: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.skill-bar-fill {
+  background-color: #667eea;
+  height: 100%;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+/* Experience Section */
+#experience {
+  background-color: #f4f4f4;
+}
+.experience-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Projects Section */
+#projects {
+  background-color: #fff;
+}
+.project-item {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Education Section */
+#education {
+  background-color: #f4f4f4;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #fff;
+  padding: 50px 0;
+}
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 5px #667eea;
+}
+#submit-button {
+  background-color: #667eea;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2em; }
+  .hero p { font-size: 1em; }
+  section { padding: 30px 10px; }
+  #contact form { max-width: 100%; }
+}
+
+/* Sticky Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255,255,255,0.9);
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero" class="hero">
+  <h1>Padala Venkata Sai Varun Kumar</h1>
+  <p>AI Engineer & Web Developer</p>
+  <p>Building innovative AI solutions and elegant web experiences.</p>
+</section>
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>Highly motivated and results-oriented AI Engineer and Web Developer with experience in building AI-powered applications and user-friendly web interfaces.  Passionate about leveraging the power of AI to solve real-world problems and create innovative solutions. Proven ability to work independently and collaboratively within a team.  Eager to continue learning and growing in the ever-evolving fields of AI and web development.</p>
+</section>
+
+
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <div>
+    <div class="skill-item">
+      <p>Python</p>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <p>JavaScript</p>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <p>React.js</p>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <p>Node.js</p>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <p>MongoDB</p>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+    </div>
+    <div class="skill-item">
+      <p>Langchain</p>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+    </div>
+    </div>
+</section>
+
+<section id="experience" class="section">
+  <h2>Experience</h2>
+  <div class="experience-item">
+    <h3>AI Research Intern, CloudEyeTechnologies (April 2024 – May 2024)</h3>
+    <p>Built a Diet Nutrition AI using LangChain and Streamlit, integrated into SkillJo Web. Explored LangChain, langGraph concepts. Leveraged prompt engineering to personalize dietary suggestions. Gained practical exposure to RAG pipelines and vector stores.</p>
+  </div>
+  <div class="experience-item">
+    <h3>AI Engineer Intern, ZenithYuga Tech (February 2024 – April 2024)</h3>
+    <p>Developed agents for web applications. Gained experience with APIs, LLMs, and Agentic AI systems. Explored the world of AI in depth.</p>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="project-item">
+    <h3>Studymate-Ai</h3>
+    <p>A personalized study assistant using Gemini 1.5 Flash, Streamlit, Langchain, and Python.</p>
+  </div>
+  <div class="project-item">
+    <h3>StartUp-Pitch-Agent</h3>
+    <p>A multi-agent system using LangGraph, Gemini, Streamlit, Langchain, and Python to generate startup pitches.</p>
+  </div>
+  <div class="project-item">
+    <h3>Prescripto</h3>
+    <p>A doctor discovery and booking platform built with React.js, Express.js, MongoDB, and Node.js.</p>
+  </div>
+  <div class="project-item">
+    <h3>Prescripto Admin Panel</h3>
+    <p>Admin panel for Prescripto built with React.js, Express.js, MongoDB, and Node.js.</p>
+  </div>
+  <div class="project-item">
+    <h3>Talk Space - Chatting App</h3>
+    <p>A chatting app built with React.js, Node.js, Express.js, MongoDB, and Firebase.</p>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <h2>Education</h2>
+  <div class="education-item">
+    <h3>Vignan’s Institute of Information Technology</h3>
+    <p>B.Tech in Computer Science Engineering (Artificial Intelligence) - 2022 - 2026 (CGPA: 8.75)</p>
+  </div>
+  <div class="education-item">
+    <h3>Sri Chaitanya Junior College</h3>
+    <p>Intermediate - 2020 - 2022 (Percentage: 88.4%)</p>
+  </div>
+  <div class="education-item">
+    <h3>Chalapathi High School</h3>
+    <p>Secondary Education - 2015 - 2020 (Percentage: 100%)</p>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <form id="contact-form">
+    <input type="text" id="name" class="form-control" placeholder="Name" required>
+    <input type="email" id="email" class="form-control" placeholder="Email" required>
+    <textarea id="message" class="form-control" placeholder="Message" required></textarea>
+    <button type="submit" id="submit-button">Send</button>
+  </form>
+</section>
+
+<script>
+// Scroll Animations
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.5
+});
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+// Smooth Scrolling
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Form Validation (Placeholder - Replace with robust validation)
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Thank you for your message!');
+  this.reset();
+});
+
+
+//Skill Bar Animations (Add this after the other scripts)
+const skillBars = document.querySelectorAll('.skill-bar-fill');
+skillBars.forEach(bar => {
+  bar.style.width = bar.parentElement.querySelector('p').textContent;
+});
+
+</script>
+
+</body>
+</html>
+```
