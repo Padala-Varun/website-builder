@@ -15,7 +15,7 @@ def generate_portfolio_site(resume_text: str) -> str:
 
     try:
         # ✅ Use Gemini 1.5 Flash model
-        model = genai.GenerativeModel("gemini-2.5-flash")
+        model = genai.GenerativeModel("gemini-1.5-flash")
 
         prompt = (
     "You are a professional front-end web designer. Based on the resume text below, "
